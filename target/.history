@@ -1,0 +1,31 @@
+compile
+console
+run
+run google
+run www.google.com
+run
+compile
+run
+run www.i.ua.com
+exit
+scala
+console
+compile
+run https://www.google.com
+compile
+run https://www.google.com
+exit
+compile
+run https://www.google.com
+compile
+run https://www.google.com
+run www.google.com
+console
+compile
+run
+run www.google.com
+exit
+run www.google.com
+sbt assembly
+assembly
+exit
