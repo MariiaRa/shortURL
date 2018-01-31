@@ -4,7 +4,7 @@
 		module="urlshortener_2.12"
 		revision="0.1"
 		status="integration"
-		publication="20180131124327"
+		publication="20180131125818"
 	>
 		<description>
 		URLShortener
@@ -32,5 +32,6 @@
 	<dependencies>
 		<dependency org="org.scala-lang" name="scala-compiler" rev="2.12.4" conf="scala-tool->default,optional(default)"/>
 		<dependency org="org.scala-lang" name="scala-library" rev="2.12.4" conf="scala-tool->default,optional(default);compile->default(compile)"/>
+		<dependency org="org.specs2" name="specs2-core_2.12" rev="4.0.2" conf="test->default(compile)"/>
 	</dependencies>
 </ivy-module>
