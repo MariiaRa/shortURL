@@ -2,3 +2,5 @@ createDir.sh
 launch.sh
 shortURLs.txt
 *.sh
+src/main/scala/*.sh
+
