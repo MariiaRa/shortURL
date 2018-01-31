@@ -10,16 +10,6 @@ class shortURLSpec3 extends org.specs2.mutable.Specification{
 "ldap://[2001:db8::7]/c=GB?objectClass?one", "mailto:John.Doe@example.com", "news:comp.infosystems.www.servers.unix", "tel:+1-816-555-1212", "telnet://192.0.2.16:80/",
 "urn:oasis:names:specification:docbook:dtd:xml:4.1.2")
 
- /* val tested = for(url <- listOfURLs)yield x.test(url)*/
-
-/*  "a list of urls must must be Right(true)" >> {
-    listOfURLs foreach { url =>
-      ("is valid: " + url) >> {
-        x.test(url) must beRight(true)
-      }
-    }
-  }*/
-
   listOfvalidURLs.foldLeft(Fragments.empty)((res, url) => res.append("example "+url ! { x.test(url) must beRight(true) }))
 
 }
