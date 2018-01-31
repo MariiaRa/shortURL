@@ -29,3 +29,5 @@ run www.google.com
 sbt assembly
 assembly
 exit
+run https://www.i.ua
+exit
