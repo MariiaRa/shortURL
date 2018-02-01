@@ -11,9 +11,9 @@ object URLReadInput {
   private def isValid(url:String): Boolean = Pattern.matches(urlPattern, url)
 
   def main(args: Array[String]): Unit = {
-    if(args.length == 0){
+    if (args.length == 0){
       println("No URL, please provide a valid URL.")
-    }else{
+    } else {
       isValid(args(0)) match {
         case true => println("www.short-url/" + scala.util.Random.nextInt(100))
         case false => println("Not a valid url")
