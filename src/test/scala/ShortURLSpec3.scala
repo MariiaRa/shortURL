@@ -2,9 +2,8 @@ import org.specs2.specification.core.Fragments
 
 class shortURLSpec3 extends org.specs2.mutable.Specification{
 
-
   val x = new shortURL
-  val listOfvalidURLs = List[String] (
+  val listOfvalidURLs = List[String](
     "https://www.google.com",
     "htttp://www.i.ua",
     "ftp://ftp.is.co.za/rfc/rfc1808.txthppt",
@@ -24,7 +23,7 @@ class shortURLSpec3 extends org.specs2.mutable.Specification{
     "telnet://192.0.2.16:80/",
     "urn:oasis:names:specification:docbook:dtd:xml:4.1.2")
 
-  val listOfInvalidUrls = List[String] (
+  val listOfInvalidUrls = List[String](
     "http://",
     "http://.",
     "http://..",
@@ -53,6 +52,7 @@ class shortURLSpec3 extends org.specs2.mutable.Specification{
     "http://10.1.1.1",
     "http://10.1.1.254")
 
-  listOfvalidURLs.foldLeft(Fragments.empty)((res, url) => res.append("url "+url+ " is valid"! { x.test(url) must beRight(true) }))
-  listOfInvalidUrls.foldLeft(Fragments.empty)((res, url) => res.append("url "+url+ " is invalid"! { x.test(url) must beRight(false) }))
+  listOfvalidURLs.foldLeft(Fragments.empty)((res, url) => res.append("url "+url+ " is valid" ! { x.test(url) must beRight(true) }))
+  listOfInvalidUrls.foldLeft(Fragments.empty)((res, url) => res.append("url "+url+ " is invalid" ! { x.test(url) must beRight(false) }))
+
 }
