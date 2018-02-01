@@ -1,8 +1,0 @@
-[0m[[0m[0minfo[0m] [0m[0mshortURLSpec[0m
-[0m[[0m[0minfo[0m] [0m[0m this is my specification[0m
-[0m[[0m[0minfo[0m] [0m[0m   [32m+[0m where url "https://www.google.com" must be Right(true)[0m
-[0m[[0m[0minfo[0m] [0m[0m   [32m+[0m where url "www.google.com" must be Right(false)[0m
-[0m[[0m[0minfo[0m] [0m[0m   [32m+[0m where url "" must be Left("No URL, please provide a valid URL.")[0m
-[0m[[0m[0minfo[0m] [0m[0mTotal for specification shortURLSpec[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mFinished in 84 ms[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36m[0m[36m3 examples, 0 failure, 0 error[0m[0m

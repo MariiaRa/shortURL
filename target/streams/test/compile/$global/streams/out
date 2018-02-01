@@ -1,4 +1,0 @@
-[0m[[0m[31merror[0m] [0m[0m/home/maria/sbt-projects/shortURL/src/test/scala/shortURLSpec.scala:6:20: not found: type SpecStructure[0m
-[0m[[0m[31merror[0m] [0m[0m  override def is: SpecStructure = s2"""[0m
-[0m[[0m[31merror[0m] [0m[0m                   ^[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m
