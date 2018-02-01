@@ -4,7 +4,6 @@ import org.specs2.specification.core.SpecStructure
 class shortURLSpec extends Specification{
 
   val x = new shortURL
-  /*val listOfURLs = List[String] ("https://www.google.com", "htttp://www.i.ua", "ftp://ftp.is.co.za/rfc/rfc1808.txthppt", "tel:+1-816-555-1212")*/
 
   override def is: SpecStructure = s2"""
 
