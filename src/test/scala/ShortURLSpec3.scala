@@ -52,7 +52,7 @@ class ShortURLSpec3 extends org.specs2.mutable.Specification{
     "http://10.1.1.1",
     "http://10.1.1.254")
 
-  listOfvalidURLs.foldLeft(Fragments.empty)((res, url) => res.append("url " + url + " is valid" ! { x.test(url) must beRight(true) }))
-  listOfInvalidUrls.foldLeft(Fragments.empty)((res, url) => res.append("url " + url + " is invalid" ! { x.test(url) must beRight(false) }))
+  listOfvalidURLs.foldLeft(Fragments.empty)((res, url) => res.append("url " + url + " is valid" ! { x.test(url) must_== "Valid" }))
+  listOfInvalidUrls.foldLeft(Fragments.empty)((res, url) => res.append("url " + url + " is invalid" ! { x.test(url) must_== "Invalid" }))
 
-}
+  }
