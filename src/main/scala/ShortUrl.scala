@@ -1,12 +1,6 @@
 import java.util.regex.Pattern
 
-class shortURL{
-
-/*  val urlPattern = "(([:]*[A-Za-z]{3,9}:((?:\\/\\/)[\\[:\\d\\w\\]]*)?)((?:\\+?(\\d{1,3}))?[-. (]" +
-    "(\\d{1,3})[-. )](\\d{1,3})[-. ]*(\\d{1,4})[-. :](\\d{1,4})[\\/]*)?((?:[\\-;:&=\\+\\$,\\w]+@)?" +
-    "[A-Za-z0-9\\.\\-]+|(?:www\\.|[\\-;:&=\\+\\$,\\w]+@)( [A-Za-z0-9\\.\\-]+ )?)?" +
-    "((?:\\/[\\+~%\\/\\.\\w\\-:]*)?\\??(?:[\\(\\)\\?\\-\\+=&;%@\\.\\w]*)#?(?:[\\.\\!\\/\\w-:]*))?)"*/
-
+class ShortURL{
 
   private def isValid(url: String): Boolean = {
     Pattern.matches(URLReadInput.urlPattern, url)

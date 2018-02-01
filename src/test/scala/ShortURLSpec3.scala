@@ -1,8 +1,8 @@
 import org.specs2.specification.core.Fragments
 
-class shortURLSpec3 extends org.specs2.mutable.Specification{
+class ShortURLSpec3 extends org.specs2.mutable.Specification{
 
-  val x = new shortURL
+  val x = new ShortURL
   val listOfvalidURLs = List[String](
     "https://www.google.com",
     "htttp://www.i.ua",
