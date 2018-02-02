@@ -3,6 +3,7 @@ import org.specs2.specification.core.Fragments
 class ShortURLSpec3 extends org.specs2.mutable.Specification{
 
   val x = new ShortURL
+
   val listOfvalidURLs = List[String](
     "https://www.google.com",
     "htttp://www.i.ua",
@@ -20,8 +21,7 @@ class ShortURLSpec3 extends org.specs2.mutable.Specification{
     "mailto:John.Doe@example.com",
     "news:comp.infosystems.www.servers.unix",
     "tel:+1-816-555-1212",
-    "telnet://192.0.2.16:80/",
-    "urn:oasis:names:specification:docbook:dtd:xml:4.1.2")
+    "telnet://192.0.2.16:80/")
 
   val listOfInvalidUrls = List[String](
     "http://",
