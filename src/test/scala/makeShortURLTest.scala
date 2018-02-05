@@ -1,5 +1,3 @@
-
-
 class makeShortURLTest extends org.specs2.mutable.Specification{
 
   "A makeShortURL" should {
