@@ -2,7 +2,7 @@ import org.specs2.specification.core.Fragments
 
 class ShortURLSpec3 extends org.specs2.mutable.Specification{
 
-  val x = new ShortURL
+  val validator = new validateURL
 
   val listOfvalidURLs = List[String](
     "https://www.google.com",
@@ -52,7 +52,7 @@ class ShortURLSpec3 extends org.specs2.mutable.Specification{
     "http://10.1.1.1",
     "http://10.1.1.254")
 
-  listOfvalidURLs.foldLeft(Fragments.empty)((res, url) => res.append("url " + url + " is valid" ! { x.test(url) must_== "Valid" }))
-  listOfInvalidUrls.foldLeft(Fragments.empty)((res, url) => res.append("url " + url + " is invalid" ! { x.test(url) must_== "Invalid" }))
+  listOfvalidURLs.foldLeft(Fragments.empty)((res, url) => res.append("url " + url + " is valid" ! { validator.test(url) must_== "Valid" }))
+  listOfInvalidUrls.foldLeft(Fragments.empty)((res, url) => res.append("url " + url + " is invalid" ! { validator.test(url) must_== "Invalid" }))
 
   }
