@@ -1,7 +1,7 @@
 /*Unit specification*/
 class ShortURLSpec2 extends org.specs2.mutable.Specification{
 
-  val x = new ShortURL
+  val x = new validateURL
 
   /*"this is my specification" >> {
     """where example 1 "https://www.google.com" must be Right(true)""" >> {
@@ -16,8 +16,8 @@ class ShortURLSpec2 extends org.specs2.mutable.Specification{
   }*/
 
   "This is my example" >> {
-    x.test("https://www.google.com") must_== Right(true) // this fails
-    x.test("www.google.com") must_== Right(false)// this is not executed
-    x.test("") must_== Left("No URL, please provide a valid URL.")
+    x.test("https://www.google.com") must_== "Valid" // this fails
+    x.test("www.google.com") must_== "Invalid"// this is not executed
+    x.test("") must_== "No URL, please provide a valid URL."
   }
 }

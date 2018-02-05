@@ -2,9 +2,7 @@ import java.util.regex.Pattern
 
 class ShortURL{
 
-  private def isValid(url: String): Boolean = {
-    Pattern.matches(URLReadInput.urlPattern, url)
-  }
+  private def isValid(url: String): Boolean = Pattern.matches(URLReadInput.urlPattern, url)
 
   def test(url: String): String = {
     if (url.length == 0) {

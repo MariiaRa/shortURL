@@ -4,7 +4,7 @@ import org.specs2.specification.core.SpecStructure
 /*Acceptance specification*/
 class ShortURLSpec extends Specification{
 
-  val x = new ShortURL
+  val x = new validateURL
 
   override def is: SpecStructure = s2"""
 
@@ -14,8 +14,8 @@ class ShortURLSpec extends Specification{
     where url "" must be Left("No URL, please provide a valid URL.") $e3
                                                                      """
 
-  def e1 = x.test("https://www.google.com") must beRight(true)
-  def e2 = x.test("www.google.com") must beRight(false)
-  def e3 = x.test("") must beLeft("No URL, please provide a valid URL.")
+  def e1 = x.test("https://www.google.com") must_== "Valid"
+  def e2 = x.test("www.google.com") must_== "Inalid"
+  def e3 = x.test("") must_== "No URL, please provide a valid URL."
 
 }
