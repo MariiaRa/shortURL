@@ -1,4 +1,4 @@
-class makeShortURLTest extends org.specs2.mutable.Specification{
+class MakeShortURLTest extends org.specs2.mutable.Specification{
 
   "A makeShortURL" should {
     """have an encode method that takes a valid URL
