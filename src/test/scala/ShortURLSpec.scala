@@ -2,7 +2,7 @@ import org.specs2.specification.core.Fragments
 
 class ShortURLSpec extends org.specs2.mutable.Specification{
 
-  val validator = new validateURL
+  val validator = new ValidateURL
 
   val listOfvalidURLs = List[String](
     "https://www.google.com",
