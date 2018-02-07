@@ -4,7 +4,7 @@ class MakeShortURLTest extends org.specs2.mutable.Specification{
     """have an encode method that takes a valid URL
        and turns it into a short string and put into map """ in {
 
-      val shortener = new makeShortURL
+      val shortener = new MakeShortURL
       val listOfvalidURLs = List[String](
         "https://www.google.com",
         "htttp://www.i.ua",

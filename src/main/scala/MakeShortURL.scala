@@ -1,4 +1,4 @@
-class makeShortURL {
+class MakeShortURL {
 
   val urlMap = collection.mutable.Map[String, String]()
   val alphabet: String = "bcdfghjkmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ23456789-_"

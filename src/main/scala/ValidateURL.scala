@@ -1,7 +1,8 @@
 import java.util.regex.Pattern
 
-class validateURL{
+class ValidateURL{
 
+  val shortener = new MakeShortURL
   val urlPattern = "([A-Za-z]{3,9}:(?:\\/\\/)?)*([a-zA-Z0-9.-]+(:[a-zA-Z0-9.&%$-]+)*@)*" +
     "((?!(10\\.|172\\.(1[6-9]|2\\d|3[01])\\.|192\\.168\\.).*)(?!255\\.255\\.255\\.255)" +
     "(25[0-5]|2[1,3]\\d|[1]\\d\\d|[1-9]\\d|[1-9])(\\.(25[0-5]|2[0-4]\\d|[1]\\d\\d|[1-9]\\d|\\d)){3}|" +
@@ -17,10 +18,8 @@ class validateURL{
     if (url.length == 0) {
       "No URL, please provide a valid URL."
     } else {
-      isValid(url) match {
-        case true => "Valid"
-        case false => "Invalid"
-      }
+      if(isValid(url)) shortener.encode(url)
+      else "Invalid"
     }
   }
 }

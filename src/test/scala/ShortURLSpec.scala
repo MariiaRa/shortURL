@@ -1,6 +1,6 @@
 import org.specs2.specification.core.Fragments
 
-class ShortURLSpec3 extends org.specs2.mutable.Specification{
+class ShortURLSpec extends org.specs2.mutable.Specification{
 
   val validator = new validateURL
 
@@ -52,7 +52,7 @@ class ShortURLSpec3 extends org.specs2.mutable.Specification{
     "http://10.1.1.1",
     "http://10.1.1.254")
 
-  listOfvalidURLs.foldLeft(Fragments.empty)((res, url) => res.append("url " + url + " is valid" ! { validator.test(url) must_== "Valid" }))
+  listOfvalidURLs.foldLeft(Fragments.empty)((res, url) => res.append("url is valid; new short name: " + validator.test(url) ! { validator.test(url) must contain("www.short-url/") }))
   listOfInvalidUrls.foldLeft(Fragments.empty)((res, url) => res.append("url " + url + " is invalid" ! { validator.test(url) must_== "Invalid" }))
 
   }
